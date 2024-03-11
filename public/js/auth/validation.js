@@ -6,8 +6,8 @@ export const isValidUsername = (username) => {
 export const isValidPassword = (password) => {
   const isValid =
     password.length >= 8 &&
-    password.match(/[A-Z]/) !== null &&
-    password.match(/[0-9]/) !== null;
+    /([A-Z]|[À-Ü])/.test(password) &&
+    /[0-9]/.test(password);
   return isValid;
 };
 
